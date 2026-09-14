@@ -96,19 +96,19 @@ A particle receives a positive metal flag if a voxel with HU ≥ 3000 is present
 Noise control :
 
 Noise control is performed using the aorta.
-The aorta mask is first eroded using the same spherical structuring element with radius 3 to reduce the contribution of boundary voxels.
-The CT values within the resulting aortic mask are used to calculate:
-•	Minimum HU
-•	Maximum HU
-•	Mean HU
-•	Standard deviation
-•	SNR
+The aorta mask is first eroded using the same spherical structuring element with radius 3 to reduce the contribution of boundary voxels. <br>
+The CT values within the resulting aortic mask are used to calculate: <br>
+•	Minimum HU <br>
+•	Maximum HU  <br>
+•	Mean HU <br>
+•	Standard deviation <br>
+•	SNR <br>
 The noise-control results are saved separately as an Excel file.
 
 # Output
-For each CT slice, the pipeline saves a two-panel visualization as a .png to visually assess the quality of segmentations.
-1. Original CT with aorta, myocardium, left ventricle, and outer-edge masks overlaid.
-2. Original CT with detected fat particles overlaid.
+For each CT slice, the pipeline saves a two-panel visualization as a .png to visually assess the quality of segmentations. <br>
+1. Original CT with aorta, myocardium, left ventricle, and outer-edge masks overlaid. <br>
+2. Original CT with detected fat particles overlaid. <br>
 
 For each patient, the converted CT image and the selected cardiac segmentation masks are stored in a MASK folder inside the corresponding patient directory. The converted CT image is saved as a NIfTI file named according to the patient index. 
 The segmentation results are stored in a separate mask folder and include the aorta, myocardium, and left ventricle masks. The pipeline also saves a two-panel PNG visualization for each CT slice to enable the assessment of segmentations. 
