@@ -19,31 +19,32 @@ The analysis pipeline consists of the following steps:
 # Requirements
 
 This code has been written for Python 3.10. and the code uses the following Python packages:
-•	NumPy
-•	SimpleITK
-•	NiBabel
-•	SciPy
-•	Matplotlib
-•	pandas
-•	openpyxl
-Install the required packages: 
-pip install numpy SimpleITK nibabel scipy matplotlib pandas openpyxl
+
+•	NumPy <br>
+•	SimpleITK<br>
+•	NiBabel<br>
+•	SciPy<br>
+•	Matplotlib<br>
+•	pandas<br>
+•	openpyxl<br>
+Install the required packages: <br>
+`pip install numpy SimpleITK nibabel scipy matplotlib pandas openpyxl`
 
 
 # Configuration
 Before running the analysis, configure the input and output paths at the beginning of the Python script.
 The following paths must be configured:
-dicom_root = r"/path/to/DICOM"
+`dicom_root = r"/path/to/DICOM"`
 dicom_root should point to the main directory containing the patient folders and images are expected to be as ‘.dcm’ .
 
-noise_folder = r"/path/to/noise_results"
+`noise_folder = r"/path/to/noise_results"`
 noise_folder specifies where the aortic noise-control Excel files are saved.
 
-results_folder = r"/path/to/results"
+`results_folder = r"/path/to/results"`
 results_folder specifies where the particle-analysis Excel files are saved.
 
 The analysis can be started from a specific patient index by changing:
-start_index = 0
+`start_index = 0`
 For example, setting start_index = 10 starts the analysis from patient index 10.
 
 Input data:
@@ -65,11 +66,11 @@ https://github.com/wasserth/TotalSegmentator
 Cardiac segmentation:
 
 TotalSegmentator is used with:
-task = "heartchambers_highres"
-The following anatomical masks are retained:
-•	Aorta
-•	Myocardium
-•	Left ventricle
+`task = "heartchambers_highres"` <br>
+The following anatomical masks are retained: <br>
+•	Aorta <br>
+•	Myocardium <br>
+•	Left ventricle <br>
 These masks are used for subsequent fat-particle analysis and visualization.
 
 Fat particle detection:
