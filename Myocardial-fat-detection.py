@@ -56,7 +56,8 @@ def process_patient(patient_idx, patient_folder, noise_folder, results_folder, d
                     max_dicoms = num_dicoms
                     chosen_ser = root
                     chosen_series_id = series_id_tmp
-        except Exception:
+        except Exception as e:
+            print(f"Error reading {root}: {e}")
             continue
 
     if not chosen_ser:
