@@ -30,7 +30,6 @@ This code has been written for Python 3.10. and the code uses the following Pyth
 Install the required packages: <br>
 `pip install numpy SimpleITK nibabel scipy matplotlib pandas openpyxl`
 
-
 # Configuration
 Before running the analysis, configure the input and output paths at the beginning of the Python script.
 The following paths must be configured:
